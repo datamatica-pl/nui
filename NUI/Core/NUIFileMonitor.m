@@ -10,7 +10,7 @@
 
 @implementation NUIFileMonitor
 
-+(void)watch:(NSString*)path withCallback:(void(^)())callback
++(void)watch:(NSString*)path withCallback:(void(^)(void))callback
 {
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     int fileDescriptor = open([path UTF8String], O_EVTONLY);

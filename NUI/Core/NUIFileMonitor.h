@@ -10,6 +10,6 @@
 
 @interface NUIFileMonitor : NSObject
 
-+(void)watch:(NSString*)path withCallback:(void(^)())handler;
++(void)watch:(NSString*)path withCallback:(void(^)(void))handler;
 
 @end
